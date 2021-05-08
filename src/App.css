@@ -7,8 +7,11 @@ button {
   border: 0;
   cursor: pointer;
 }
+ul {
+  padding: 0;
+}
 
-.navbar {
+nav {
   font-size: 2rem;
   padding: 1em;
   background-color: blanchedalmond;
@@ -56,6 +59,7 @@ button {
 .habit {
   font-size: 2.5rem;
   padding: 0.5em;
+  padding-left: 0;
   list-style: none;
 }
 
