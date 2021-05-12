@@ -24,18 +24,14 @@ class App extends Component {
   };
 
   handleDecrement = (habit) => {
-    const habits = [...this.state.habits];
-    const index = habits.indexOf(habit);
-    // 방법1
-    // if (!habits[index].count <= 0) {
-    //   habits[index].count--;
-    // }
-
-    // 방법2
-    const count = habits[index].count - 1;
-    habits[index].count = count <= 0 ? 0 : count;
-    this.setState({ habits: habits });
-    console.log(`handleDecrement , ${habit.name}`);
+    const habits = this.state.habits.map((item) => {
+      if (item.id === habit.id) {
+        const count = habit.count - 1;
+        return { ...habit, count: count < 0 ? 0 : count };
+      }
+      return item;
+    });
+    this.setState({ habits });
   };
 
   handleDelete = (habit) => {
