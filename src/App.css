@@ -2,6 +2,22 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+}
+.container2 {
+}
+.main {
+  background-color: white;
+  overflow-y: scroll;
+  height: 600px;
+}
+
 button {
   outline: none;
   border: 0;

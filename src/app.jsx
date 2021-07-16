@@ -65,7 +65,8 @@ class App extends Component {
   render() {
     console.log("app");
     return (
-      <>
+      <section className="container">
+        <div className="container2">
         <Navbar
           totalCount={this.state.habits.filter((item) => item.count > 0).length}
         />
@@ -77,7 +78,8 @@ class App extends Component {
           onAdd={this.handleAdd}
           onReset={this.handleReset}
         />
-      </>
+        </div>
+      </section>
     );
   }
 }
